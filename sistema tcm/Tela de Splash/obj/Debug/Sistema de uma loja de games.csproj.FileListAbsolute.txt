@@ -1,0 +1,23 @@
+C:\Users\jvslx\Desktop\Projeto-TCM-main\Tela de Splash\Tela de Splash\bin\Debug\Tela de Splash.exe.config
+C:\Users\jvslx\Desktop\Projeto-TCM-main\Tela de Splash\Tela de Splash\bin\Debug\Tela de Splash.exe
+C:\Users\jvslx\Desktop\Projeto-TCM-main\Tela de Splash\Tela de Splash\bin\Debug\Tela de Splash.pdb
+C:\Users\jvslx\Desktop\Projeto-TCM-main\Tela de Splash\Tela de Splash\obj\Debug\Sistema de uma loja de games.csprojAssemblyReference.cache
+C:\Users\jvslx\Desktop\Projeto-TCM-main\Tela de Splash\Tela de Splash\obj\Debug\Tela_de_Splash.Properties.Resources.resources
+C:\Users\jvslx\Desktop\Projeto-TCM-main\Tela de Splash\Tela de Splash\obj\Debug\Sistema de uma loja de games.csproj.GenerateResource.cache
+C:\Users\jvslx\Desktop\Projeto-TCM-main\Tela de Splash\Tela de Splash\obj\Debug\Sistema de uma loja de games.csproj.CoreCompileInputs.cache
+C:\Users\jvslx\Desktop\Projeto-TCM-main\Tela de Splash\Tela de Splash\obj\Debug\Tela de Splash.exe
+C:\Users\jvslx\Desktop\Projeto-TCM-main\Tela de Splash\Tela de Splash\obj\Debug\Tela de Splash.pdb
+C:\Users\jvslx\Desktop\Projeto-TCM-main\Tela de Splash\Tela de Splash\obj\Debug\Tela_de_Splash.frm_Splash.resources
+C:\Users\jvslx\Desktop\Projeto-TCM-main\Tela de Splash\Tela de Splash\obj\Debug\desing_da_tela_de_login.frm_Login.resources
+C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\bin\Debug\Tela de Splash.exe.config
+C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\bin\Debug\Tela de Splash.exe
+C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\bin\Debug\Tela de Splash.pdb
+C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\Sistema de uma loja de games.csprojAssemblyReference.cache
+C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\Tela_de_Splash.frm_Splash.resources
+C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\desing_da_tela_de_login.frm_Login.resources
+C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\Tela_de_Splash.Properties.Resources.resources
+C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\Sistema de uma loja de games.csproj.GenerateResource.cache
+C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\Sistema de uma loja de games.csproj.CoreCompileInputs.cache
+C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\Tela de Splash.exe
+C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\Tela de Splash.pdb
+C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\Tela_de_Splash.frm_Principal.resources
