@@ -68,6 +68,7 @@ namespace desing_da_tela_de_login
             {
                 txtSenha.Text = "";
                 txtSenha.ForeColor = Color.LightGray;
+                txtSenha.UseSystemPasswordChar = true; 
             }
         }
 
