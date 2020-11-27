@@ -21,3 +21,5 @@ C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\Sis
 C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\Tela de Splash.exe
 C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\Tela de Splash.pdb
 C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\Tela_de_Splash.frm_Principal.resources
+C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\Sistema de uma loja de games.csproj.CopyComplete

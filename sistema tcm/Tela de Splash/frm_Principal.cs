@@ -21,5 +21,10 @@ namespace Tela_de_Splash
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -81,8 +81,10 @@ namespace desing_da_tela_de_login
         }
 
         private void btnLogar_Click(object sender, EventArgs e)
-        {           
-              
+        {
+            this.Hide();
+            frm_Principal login = new frm_Principal();
+            login.Show();
         }
     }
 }
