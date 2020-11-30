@@ -36,12 +36,16 @@ namespace Tela_de_Splash
             this.btnDelivery = new FontAwesome.Sharp.IconButton();
             this.btnProdutos = new FontAwesome.Sharp.IconButton();
             this.btnVendas = new FontAwesome.Sharp.IconButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelLogoReset = new System.Windows.Forms.Panel();
+            this.btnHome = new System.Windows.Forms.PictureBox();
+            this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.iconPagAtual = new FontAwesome.Sharp.IconPictureBox();
+            this.lblPagAtualHome = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelLogoReset.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
+            this.panelTitleBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPagAtual)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -52,7 +56,7 @@ namespace Tela_de_Splash
             this.panelMenu.Controls.Add(this.btnDelivery);
             this.panelMenu.Controls.Add(this.btnProdutos);
             this.panelMenu.Controls.Add(this.btnVendas);
-            this.panelMenu.Controls.Add(this.panel2);
+            this.panelMenu.Controls.Add(this.panelLogoReset);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
@@ -80,6 +84,7 @@ namespace Tela_de_Splash
             this.btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn.UseVisualStyleBackColor = true;
+            this.btn.Click += new System.EventHandler(this.btn_Click);
             // 
             // btnConsulta
             // 
@@ -102,7 +107,7 @@ namespace Tela_de_Splash
             this.btnConsulta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsulta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnConsulta.UseVisualStyleBackColor = true;
-
+            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
             // 
             // btnDelivery
             // 
@@ -125,7 +130,7 @@ namespace Tela_de_Splash
             this.btnDelivery.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelivery.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDelivery.UseVisualStyleBackColor = true;
-
+            this.btnDelivery.Click += new System.EventHandler(this.btnDelivery_Click_1);
             // 
             // btnProdutos
             // 
@@ -148,7 +153,7 @@ namespace Tela_de_Splash
             this.btnProdutos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProdutos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnProdutos.UseVisualStyleBackColor = true;
-
+            this.btnProdutos.Click += new System.EventHandler(this.btnProdutos_Click_1);
             // 
             // btnVendas
             // 
@@ -171,49 +176,82 @@ namespace Tela_de_Splash
             this.btnVendas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVendas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVendas.UseVisualStyleBackColor = true;
-
+            this.btnVendas.Click += new System.EventHandler(this.btnVendas_Click_1);
             // 
-            // panel2
+            // panelLogoReset
             // 
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(214, 152);
-            this.panel2.TabIndex = 0;
+            this.panelLogoReset.Controls.Add(this.btnHome);
+            this.panelLogoReset.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogoReset.Location = new System.Drawing.Point(0, 0);
+            this.panelLogoReset.Name = "panelLogoReset";
+            this.panelLogoReset.Size = new System.Drawing.Size(214, 152);
+            this.panelLogoReset.TabIndex = 0;
             // 
-            // pictureBox1
+            // btnHome
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(223, 137);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.Location = new System.Drawing.Point(-3, 3);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(223, 137);
+            this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnHome.TabIndex = 0;
+            this.btnHome.TabStop = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // panel3
+            // panelTitleBar
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(214, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(903, 106);
-            this.panel3.TabIndex = 1;
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panelTitleBar.Controls.Add(this.lblPagAtualHome);
+            this.panelTitleBar.Controls.Add(this.iconPagAtual);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.Location = new System.Drawing.Point(214, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(903, 106);
+            this.panelTitleBar.TabIndex = 1;
+            this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
+            // 
+            // iconPagAtual
+            // 
+            this.iconPagAtual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.iconPagAtual.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.iconPagAtual.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.iconPagAtual.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.iconPagAtual.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPagAtual.IconSize = 37;
+            this.iconPagAtual.Location = new System.Drawing.Point(12, 38);
+            this.iconPagAtual.Name = "iconPagAtual";
+            this.iconPagAtual.Size = new System.Drawing.Size(37, 37);
+            this.iconPagAtual.TabIndex = 0;
+            this.iconPagAtual.TabStop = false;
+            // 
+            // lblPagAtualHome
+            // 
+            this.lblPagAtualHome.AutoSize = true;
+            this.lblPagAtualHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPagAtualHome.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblPagAtualHome.Location = new System.Drawing.Point(51, 45);
+            this.lblPagAtualHome.Name = "lblPagAtualHome";
+            this.lblPagAtualHome.Size = new System.Drawing.Size(52, 20);
+            this.lblPagAtualHome.TabIndex = 1;
+            this.lblPagAtualHome.Text = "Home";
             // 
             // frm_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1117, 633);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Principal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPrincipal";
             this.panelMenu.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelLogoReset.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
+            this.panelTitleBar.ResumeLayout(false);
+            this.panelTitleBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPagAtual)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -221,13 +259,15 @@ namespace Tela_de_Splash
         #endregion
 
         private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelLogoReset;
         private FontAwesome.Sharp.IconButton btnVendas;
         private FontAwesome.Sharp.IconButton btn;
         private FontAwesome.Sharp.IconButton btnConsulta;
         private FontAwesome.Sharp.IconButton btnDelivery;
         private FontAwesome.Sharp.IconButton btnProdutos;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panelTitleBar;
+        private System.Windows.Forms.PictureBox btnHome;
+        private FontAwesome.Sharp.IconPictureBox iconPagAtual;
+        private System.Windows.Forms.Label lblPagAtualHome;
     }
 }
