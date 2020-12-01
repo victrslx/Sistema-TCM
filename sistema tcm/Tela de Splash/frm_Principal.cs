@@ -154,5 +154,23 @@ namespace Tela_de_Splash
             WindowState = FormWindowState.Minimized;
         }
 
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToString("T");
+        }
+
+        private void frm_Principal_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+            lblDate.Text = DateTime.Now.ToString("dddd, dd MMM 'de' yyyy");
+        }
+
+        private void pictureBox3_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+
     }
 }
