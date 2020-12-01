@@ -39,13 +39,23 @@ namespace Tela_de_Splash
             this.panelLogoReset = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.iconPagAtual = new FontAwesome.Sharp.IconPictureBox();
             this.lblPagAtualHome = new System.Windows.Forms.Label();
+            this.iconPagAtual = new FontAwesome.Sharp.IconPictureBox();
+            this.panelDesktop = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panelLogoReset.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPagAtual)).BeginInit();
+            this.panelDesktop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -201,6 +211,9 @@ namespace Tela_de_Splash
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panelTitleBar.Controls.Add(this.pictureBox3);
+            this.panelTitleBar.Controls.Add(this.pictureBox2);
+            this.panelTitleBar.Controls.Add(this.pictureBox1);
             this.panelTitleBar.Controls.Add(this.lblPagAtualHome);
             this.panelTitleBar.Controls.Add(this.iconPagAtual);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -210,6 +223,17 @@ namespace Tela_de_Splash
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
+            // lblPagAtualHome
+            // 
+            this.lblPagAtualHome.AutoSize = true;
+            this.lblPagAtualHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPagAtualHome.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblPagAtualHome.Location = new System.Drawing.Point(49, 24);
+            this.lblPagAtualHome.Name = "lblPagAtualHome";
+            this.lblPagAtualHome.Size = new System.Drawing.Size(81, 29);
+            this.lblPagAtualHome.TabIndex = 1;
+            this.lblPagAtualHome.Text = "Home";
+            // 
             // iconPagAtual
             // 
             this.iconPagAtual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -217,29 +241,70 @@ namespace Tela_de_Splash
             this.iconPagAtual.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconPagAtual.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.iconPagAtual.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPagAtual.IconSize = 37;
-            this.iconPagAtual.Location = new System.Drawing.Point(12, 38);
+            this.iconPagAtual.IconSize = 50;
+            this.iconPagAtual.Location = new System.Drawing.Point(0, 15);
             this.iconPagAtual.Name = "iconPagAtual";
-            this.iconPagAtual.Size = new System.Drawing.Size(37, 37);
+            this.iconPagAtual.Size = new System.Drawing.Size(50, 50);
             this.iconPagAtual.TabIndex = 0;
             this.iconPagAtual.TabStop = false;
             // 
-            // lblPagAtualHome
+            // panelDesktop
             // 
-            this.lblPagAtualHome.AutoSize = true;
-            this.lblPagAtualHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPagAtualHome.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblPagAtualHome.Location = new System.Drawing.Point(51, 45);
-            this.lblPagAtualHome.Name = "lblPagAtualHome";
-            this.lblPagAtualHome.Size = new System.Drawing.Size(52, 20);
-            this.lblPagAtualHome.TabIndex = 1;
-            this.lblPagAtualHome.Text = "Home";
+            this.panelDesktop.BackColor = System.Drawing.SystemColors.Control;
+            this.panelDesktop.Controls.Add(this.pictureBox4);
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.Location = new System.Drawing.Point(214, 106);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(903, 527);
+            this.panelDesktop.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(866, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(34, 31);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(609, 24);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(51, 42);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(826, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(34, 31);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 5;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(362, 126);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(143, 172);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 1;
+            this.pictureBox4.TabStop = false;
             // 
             // frm_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1117, 633);
+            this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -252,6 +317,11 @@ namespace Tela_de_Splash
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPagAtual)).EndInit();
+            this.panelDesktop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,5 +339,10 @@ namespace Tela_de_Splash
         private System.Windows.Forms.PictureBox btnHome;
         private FontAwesome.Sharp.IconPictureBox iconPagAtual;
         private System.Windows.Forms.Label lblPagAtualHome;
+        private System.Windows.Forms.Panel panelDesktop;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

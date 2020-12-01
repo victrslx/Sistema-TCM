@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
 using System.Runtime.InteropServices;
+using Tela_de_Splash.Forms;
 
 namespace Tela_de_Splash
 {
@@ -16,6 +17,7 @@ namespace Tela_de_Splash
     {
         private IconButton currentBtn;
         private Panel leftborderBtn;
+        private Form currentChildForm;
 
         //construtor
         public frm_Principal()
@@ -24,10 +26,7 @@ namespace Tela_de_Splash
             leftborderBtn = new Panel();
             leftborderBtn.Size = new Size(7,84);
             panelMenu.Controls.Add(leftborderBtn);
-            //Form
-            this.Text = string.Empty;
-            this.ControlBox = false;
-            this.DoubleBuffered = true;
+            
         }
 
         //estrutura
@@ -72,10 +71,27 @@ namespace Tela_de_Splash
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
         }
-
+        private void OpenChildForm(Form childForm)
+        {
+            //abrir apenas form
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+            currentChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(childForm);
+            panelDesktop.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            lblPagAtualHome.Text = childForm.Text;
+        }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
+            currentChildForm.Close();
             Reset();
 
         }
@@ -84,7 +100,6 @@ namespace Tela_de_Splash
             DisableButton();
             leftborderBtn.Visible = false;
             iconPagAtual.IconChar = IconChar.Home;
-            iconPagAtual.IconColor = Color.Orange;
             lblPagAtualHome.Text = "Home";
 
         }
@@ -92,21 +107,25 @@ namespace Tela_de_Splash
         private void btnVendas_Click_1(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
+            OpenChildForm(new Vendas());
         }
 
         private void btnProdutos_Click_1(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
+            OpenChildForm(new Produtos());
         }
 
         private void btnDelivery_Click_1(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
+            OpenChildForm(new Delivery());
         }
 
         private void btnConsulta_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
+            OpenChildForm(new Consulta());
         }
 
         private void btn_Click(object sender, EventArgs e)
@@ -124,5 +143,16 @@ namespace Tela_de_Splash
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
     }
 }
