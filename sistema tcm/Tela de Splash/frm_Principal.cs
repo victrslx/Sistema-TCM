@@ -179,5 +179,9 @@ namespace Tela_de_Splash
             login.Show();
         }
 
+        private void panelDesktop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

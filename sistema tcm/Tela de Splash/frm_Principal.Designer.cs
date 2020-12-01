@@ -246,7 +246,7 @@ namespace Tela_de_Splash
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(791, 35);
+            this.pictureBox5.Location = new System.Drawing.Point(850, 41);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(30, 42);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -259,7 +259,7 @@ namespace Tela_de_Splash
             this.lblNameLog.AutoSize = true;
             this.lblNameLog.Font = new System.Drawing.Font("Yu Gothic", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNameLog.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNameLog.Location = new System.Drawing.Point(688, 40);
+            this.lblNameLog.Location = new System.Drawing.Point(745, 46);
             this.lblNameLog.Name = "lblNameLog";
             this.lblNameLog.Size = new System.Drawing.Size(104, 33);
             this.lblNameLog.TabIndex = 6;
@@ -268,7 +268,7 @@ namespace Tela_de_Splash
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(628, 35);
+            this.pictureBox2.Location = new System.Drawing.Point(689, 40);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(51, 42);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -323,6 +323,7 @@ namespace Tela_de_Splash
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(903, 527);
             this.panelDesktop.TabIndex = 2;
+            this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
             // 
             // panel1
             // 
