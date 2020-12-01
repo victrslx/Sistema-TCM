@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using FontAwesome.Sharp;
 using System.Runtime.InteropServices;
 using Tela_de_Splash.Forms;
+using desing_da_tela_de_login;
 
 namespace Tela_de_Splash
 {
@@ -171,6 +172,12 @@ namespace Tela_de_Splash
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_Login login = new frm_Login();
+            login.Show();
+        }
 
     }
 }
