@@ -61,5 +61,9 @@ namespace Tela_de_Splash
 
         }
 
+        private void frm_Splash_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

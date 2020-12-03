@@ -16,10 +16,5 @@ namespace Tela_de_Splash.Forms
         {
             InitializeComponent();
         }
-
-        private void Produtos_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

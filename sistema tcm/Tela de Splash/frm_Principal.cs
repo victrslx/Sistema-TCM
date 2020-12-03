@@ -25,15 +25,16 @@ namespace Tela_de_Splash
         {
             InitializeComponent();
             leftborderBtn = new Panel();
-            leftborderBtn.Size = new Size(7,84);
+            leftborderBtn.Size = new Size(7,96);
             panelMenu.Controls.Add(leftborderBtn);
+            submenu();
             
         }
 
         //estrutura
         private struct RGBColors
         {
-            public static Color color1=Color.FromArgb(249, 130, 12);
+            public static Color color1 = Color.FromArgb(249, 130, 12);
         }
 
         //metodo
@@ -60,6 +61,46 @@ namespace Tela_de_Splash
                 iconPagAtual.IconColor = color;
             }
         }
+        private void btnInfoCadastro(object sanderBtn, Color color)
+        {
+            if (sanderBtn != null)
+            {
+                DisableButton();
+                //btn
+                currentBtn = (IconButton)sanderBtn;
+                currentBtn.BackColor = Color.FromArgb(40, 40, 40);
+                currentBtn.ForeColor = color;
+                currentBtn.IconColor = color;
+                //Icon pag atual
+                iconPagAtual.IconChar = currentBtn.IconChar;
+                iconPagAtual.IconColor = color;
+            }
+        }
+
+        private void submenu()
+        {
+            panelSubCadastro.Visible = false;
+        }
+        private void hidesubmenu()
+        {
+            if (panelSubCadastro.Visible == true)
+            {
+                panelSubCadastro.Visible = false;
+            }
+        }
+        private void showSubMenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                hidesubmenu();
+                subMenu.Visible = true;
+            }
+            else
+            {
+                subMenu.Visible = false;
+            }
+        }
+
         private void DisableButton()
         {
             if (currentBtn != null)
@@ -71,6 +112,7 @@ namespace Tela_de_Splash
                 currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
+
         }
         private void OpenChildForm(Form childForm)
         {
@@ -105,33 +147,10 @@ namespace Tela_de_Splash
 
         }
 
-        private void btnVendas_Click_1(object sender, EventArgs e)
+        private void btnCadastro_Click_1(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
-            OpenChildForm(new Vendas());
-        }
-
-        private void btnProdutos_Click_1(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color1);
-            OpenChildForm(new Produtos());
-        }
-
-        private void btnDelivery_Click_1(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color1);
-            OpenChildForm(new Delivery());
-        }
-
-        private void btnConsulta_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color1);
-            OpenChildForm(new Consulta());
-        }
-
-        private void btn_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color1);
+            showSubMenu(panelSubCadastro);
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -150,12 +169,6 @@ namespace Tela_de_Splash
             Application.Exit();
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToString("T");
@@ -167,10 +180,6 @@ namespace Tela_de_Splash
             lblDate.Text = DateTime.Now.ToString("dddd, dd MMM 'de' yyyy");
         }
 
-        private void pictureBox3_Click_1(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
@@ -179,9 +188,43 @@ namespace Tela_de_Splash
             login.Show();
         }
 
-        private void panelDesktop_Paint(object sender, PaintEventArgs e)
+        private void pictureBox3_Click_2(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Minimized;
+        }
 
+        private void btnConsulta_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color1);
+            OpenChildForm(new Consulta());
+        }
+
+        private void btnPedido_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color1);
+            OpenChildForm(new Pedido());
+        }
+
+        private void btnVenda_Click_1(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color1);
+            OpenChildForm(new Vendas());
+        }
+
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Clientes());
+            btnInfoCadastro(sender, RGBColors.color1);
+        }
+
+        private void btnServiços_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Clientes());
+        }
+
+        private void btnProduto_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Clientes());
         }
     }
 }

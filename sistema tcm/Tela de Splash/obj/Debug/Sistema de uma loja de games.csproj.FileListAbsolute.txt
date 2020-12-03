@@ -12,7 +12,6 @@ C:\Users\jvslx\Desktop\Projeto-TCM-main\Tela de Splash\Tela de Splash\obj\Debug\
 C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\bin\Debug\Tela de Splash.exe.config
 C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\bin\Debug\Tela de Splash.exe
 C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\bin\Debug\Tela de Splash.pdb
-C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\Sistema de uma loja de games.csprojAssemblyReference.cache
 C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\Tela_de_Splash.frm_Splash.resources
 C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\desing_da_tela_de_login.frm_Login.resources
 C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\Tela_de_Splash.Properties.Resources.resources
@@ -24,4 +23,11 @@ C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\Tel
 C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\Sistema de uma loja de games.csproj.CopyComplete
 C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\Tela_de_Splash.Vendas.resources
+C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\Sistema de uma loja de games.csprojAssemblyReference.cache
+C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\Tela_de_Splash.Forms.Pedido.resources
+C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\Tela_de_Splash.Forms.Consulta.resources
+C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\Tela_de_Splash.Forms.Clientes.resources
+C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\Tela_de_Splash.Forms.Serviços.resources
 C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\Tela_de_Splash.Forms.Produtos.resources
