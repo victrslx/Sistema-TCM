@@ -33,7 +33,6 @@ namespace Tela_de_Splash.Forms
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtCdPedido = new System.Windows.Forms.TextBox();
             this.lblData = new System.Windows.Forms.Label();
-            this.txtBanco = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtCompra = new System.Windows.Forms.TextBox();
             this.lblTotalCompra = new System.Windows.Forms.Label();
@@ -42,6 +41,8 @@ namespace Tela_de_Splash.Forms
             this.rdCredito = new System.Windows.Forms.RadioButton();
             this.cmbVezes = new System.Windows.Forms.ComboBox();
             this.button_WOC3 = new ePOSOne.btnProduct.Button_WOC();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCdPedido
@@ -67,11 +68,11 @@ namespace Tela_de_Splash.Forms
             this.txtCdPedido.BackColor = System.Drawing.SystemColors.Control;
             this.txtCdPedido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCdPedido.Font = new System.Drawing.Font("Yu Gothic", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCdPedido.Location = new System.Drawing.Point(360, 93);
+            this.txtCdPedido.Location = new System.Drawing.Point(353, 93);
             this.txtCdPedido.Name = "txtCdPedido";
             this.txtCdPedido.Size = new System.Drawing.Size(54, 34);
             this.txtCdPedido.TabIndex = 1;
-            this.txtCdPedido.Text = "724";
+            this.txtCdPedido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblData
             // 
@@ -82,17 +83,6 @@ namespace Tela_de_Splash.Forms
             this.lblData.Size = new System.Drawing.Size(73, 31);
             this.lblData.TabIndex = 18;
             this.lblData.Text = "Data";
-            // 
-            // txtBanco
-            // 
-            this.txtBanco.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.txtBanco.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBanco.Location = new System.Drawing.Point(149, 152);
-            this.txtBanco.Multiline = true;
-            this.txtBanco.Name = "txtBanco";
-            this.txtBanco.ReadOnly = true;
-            this.txtBanco.Size = new System.Drawing.Size(561, 151);
-            this.txtBanco.TabIndex = 19;
             // 
             // panel5
             // 
@@ -107,21 +97,21 @@ namespace Tela_de_Splash.Forms
             this.txtCompra.BackColor = System.Drawing.SystemColors.Control;
             this.txtCompra.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCompra.Font = new System.Drawing.Font("Yu Gothic", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCompra.Location = new System.Drawing.Point(659, 328);
+            this.txtCompra.Location = new System.Drawing.Point(652, 327);
             this.txtCompra.Name = "txtCompra";
             this.txtCompra.Size = new System.Drawing.Size(54, 34);
             this.txtCompra.TabIndex = 2;
-            this.txtCompra.Text = "724";
+            this.txtCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblTotalCompra
             // 
             this.lblTotalCompra.AutoSize = true;
             this.lblTotalCompra.Font = new System.Drawing.Font("Verdana", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalCompra.Location = new System.Drawing.Point(443, 325);
+            this.lblTotalCompra.Location = new System.Drawing.Point(454, 324);
             this.lblTotalCompra.Name = "lblTotalCompra";
-            this.lblTotalCompra.Size = new System.Drawing.Size(201, 31);
+            this.lblTotalCompra.Size = new System.Drawing.Size(190, 31);
             this.lblTotalCompra.TabIndex = 22;
-            this.lblTotalCompra.Text = "Total Crompra:";
+            this.lblTotalCompra.Text = "Total Compra:";
             // 
             // lblFormadePagamento
             // 
@@ -162,6 +152,10 @@ namespace Tela_de_Splash.Forms
             // cmbVezes
             // 
             this.cmbVezes.FormattingEnabled = true;
+            this.cmbVezes.Items.AddRange(new object[] {
+            "1x",
+            "2x",
+            "3x"});
             this.cmbVezes.Location = new System.Drawing.Point(308, 398);
             this.cmbVezes.Name = "cmbVezes";
             this.cmbVezes.Size = new System.Drawing.Size(121, 21);
@@ -187,12 +181,24 @@ namespace Tela_de_Splash.Forms
             this.button_WOC3.Text = "Realizar Venda";
             this.button_WOC3.TextColor = System.Drawing.Color.White;
             this.button_WOC3.UseVisualStyleBackColor = true;
+            this.button_WOC3.Click += new System.EventHandler(this.button_WOC3_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(152, 144);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 45;
+            this.dataGridView1.Size = new System.Drawing.Size(561, 150);
+            this.dataGridView1.TabIndex = 30;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Pedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(887, 486);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button_WOC3);
             this.Controls.Add(this.cmbVezes);
             this.Controls.Add(this.rdCredito);
@@ -201,7 +207,6 @@ namespace Tela_de_Splash.Forms
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.txtCompra);
             this.Controls.Add(this.lblTotalCompra);
-            this.Controls.Add(this.txtBanco);
             this.Controls.Add(this.lblData);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtCdPedido);
@@ -209,6 +214,7 @@ namespace Tela_de_Splash.Forms
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Pedido";
             this.Text = "Delivery";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,7 +226,6 @@ namespace Tela_de_Splash.Forms
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtCdPedido;
         private System.Windows.Forms.Label lblData;
-        private System.Windows.Forms.TextBox txtBanco;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox txtCompra;
         private System.Windows.Forms.Label lblTotalCompra;
@@ -229,5 +234,6 @@ namespace Tela_de_Splash.Forms
         private System.Windows.Forms.RadioButton rdCredito;
         private System.Windows.Forms.ComboBox cmbVezes;
         private ePOSOne.btnProduct.Button_WOC button_WOC3;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

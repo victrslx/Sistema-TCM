@@ -37,7 +37,6 @@ namespace Tela_de_Splash
             this.btnPedido = new FontAwesome.Sharp.IconButton();
             this.panelSubCadastro = new System.Windows.Forms.Panel();
             this.btnProduto = new FontAwesome.Sharp.IconButton();
-            this.btnServiços = new FontAwesome.Sharp.IconButton();
             this.btnCliente = new FontAwesome.Sharp.IconButton();
             this.btnCadastro = new FontAwesome.Sharp.IconButton();
             this.panelLogoReset = new System.Windows.Forms.Panel();
@@ -87,7 +86,6 @@ namespace Tela_de_Splash
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(214, 635);
             this.panelMenu.TabIndex = 0;
-
             // 
             // btnVenda
             // 
@@ -101,10 +99,10 @@ namespace Tela_de_Splash
             this.btnVenda.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVenda.IconSize = 32;
             this.btnVenda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVenda.Location = new System.Drawing.Point(0, 563);
+            this.btnVenda.Location = new System.Drawing.Point(0, 530);
             this.btnVenda.Name = "btnVenda";
             this.btnVenda.Padding = new System.Windows.Forms.Padding(10, 10, 10, 0);
-            this.btnVenda.Size = new System.Drawing.Size(195, 96);
+            this.btnVenda.Size = new System.Drawing.Size(214, 96);
             this.btnVenda.TabIndex = 8;
             this.btnVenda.Text = "Vendas";
             this.btnVenda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -124,10 +122,10 @@ namespace Tela_de_Splash
             this.btnConsulta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnConsulta.IconSize = 32;
             this.btnConsulta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsulta.Location = new System.Drawing.Point(0, 467);
+            this.btnConsulta.Location = new System.Drawing.Point(0, 434);
             this.btnConsulta.Name = "btnConsulta";
             this.btnConsulta.Padding = new System.Windows.Forms.Padding(10, 10, 10, 0);
-            this.btnConsulta.Size = new System.Drawing.Size(195, 96);
+            this.btnConsulta.Size = new System.Drawing.Size(214, 96);
             this.btnConsulta.TabIndex = 8;
             this.btnConsulta.Text = "Consulta";
             this.btnConsulta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -147,10 +145,10 @@ namespace Tela_de_Splash
             this.btnPedido.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPedido.IconSize = 32;
             this.btnPedido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPedido.Location = new System.Drawing.Point(0, 371);
+            this.btnPedido.Location = new System.Drawing.Point(0, 338);
             this.btnPedido.Name = "btnPedido";
             this.btnPedido.Padding = new System.Windows.Forms.Padding(10, 10, 10, 0);
-            this.btnPedido.Size = new System.Drawing.Size(195, 96);
+            this.btnPedido.Size = new System.Drawing.Size(214, 96);
             this.btnPedido.TabIndex = 7;
             this.btnPedido.Text = "Pedido";
             this.btnPedido.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -162,12 +160,11 @@ namespace Tela_de_Splash
             // 
             this.panelSubCadastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.panelSubCadastro.Controls.Add(this.btnProduto);
-            this.panelSubCadastro.Controls.Add(this.btnServiços);
             this.panelSubCadastro.Controls.Add(this.btnCliente);
             this.panelSubCadastro.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubCadastro.Location = new System.Drawing.Point(0, 245);
             this.panelSubCadastro.Name = "panelSubCadastro";
-            this.panelSubCadastro.Size = new System.Drawing.Size(195, 126);
+            this.panelSubCadastro.Size = new System.Drawing.Size(214, 93);
             this.panelSubCadastro.TabIndex = 5;
             // 
             // btnProduto
@@ -182,39 +179,16 @@ namespace Tela_de_Splash
             this.btnProduto.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnProduto.IconSize = 32;
             this.btnProduto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProduto.Location = new System.Drawing.Point(0, 84);
+            this.btnProduto.Location = new System.Drawing.Point(0, 42);
             this.btnProduto.Name = "btnProduto";
             this.btnProduto.Padding = new System.Windows.Forms.Padding(10, 2, 10, 0);
-            this.btnProduto.Size = new System.Drawing.Size(195, 42);
+            this.btnProduto.Size = new System.Drawing.Size(214, 42);
             this.btnProduto.TabIndex = 4;
             this.btnProduto.Text = "Produtos";
             this.btnProduto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnProduto.UseVisualStyleBackColor = true;
             this.btnProduto.Click += new System.EventHandler(this.btnProduto_Click);
-            // 
-            // btnServiços
-            // 
-            this.btnServiços.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnServiços.FlatAppearance.BorderSize = 0;
-            this.btnServiços.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnServiços.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnServiços.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnServiços.IconChar = FontAwesome.Sharp.IconChar.CashRegister;
-            this.btnServiços.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnServiços.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnServiços.IconSize = 32;
-            this.btnServiços.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnServiços.Location = new System.Drawing.Point(0, 42);
-            this.btnServiços.Name = "btnServiços";
-            this.btnServiços.Padding = new System.Windows.Forms.Padding(10, 2, 10, 0);
-            this.btnServiços.Size = new System.Drawing.Size(195, 42);
-            this.btnServiços.TabIndex = 3;
-            this.btnServiços.Text = "Serviços";
-            this.btnServiços.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnServiços.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnServiços.UseVisualStyleBackColor = true;
-            this.btnServiços.Click += new System.EventHandler(this.btnServiços_Click);
             // 
             // btnCliente
             // 
@@ -231,7 +205,7 @@ namespace Tela_de_Splash
             this.btnCliente.Location = new System.Drawing.Point(0, 0);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Padding = new System.Windows.Forms.Padding(10, 2, 10, 0);
-            this.btnCliente.Size = new System.Drawing.Size(195, 42);
+            this.btnCliente.Size = new System.Drawing.Size(214, 42);
             this.btnCliente.TabIndex = 2;
             this.btnCliente.Text = "Clientes";
             this.btnCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -254,7 +228,7 @@ namespace Tela_de_Splash
             this.btnCadastro.Location = new System.Drawing.Point(0, 149);
             this.btnCadastro.Name = "btnCadastro";
             this.btnCadastro.Padding = new System.Windows.Forms.Padding(10, 10, 10, 0);
-            this.btnCadastro.Size = new System.Drawing.Size(195, 96);
+            this.btnCadastro.Size = new System.Drawing.Size(214, 96);
             this.btnCadastro.TabIndex = 1;
             this.btnCadastro.Text = "Cadastro";
             this.btnCadastro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -268,7 +242,7 @@ namespace Tela_de_Splash
             this.panelLogoReset.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogoReset.Location = new System.Drawing.Point(0, 0);
             this.panelLogoReset.Name = "panelLogoReset";
-            this.panelLogoReset.Size = new System.Drawing.Size(195, 149);
+            this.panelLogoReset.Size = new System.Drawing.Size(214, 149);
             this.panelLogoReset.TabIndex = 0;
             // 
             // btnHome
@@ -326,11 +300,11 @@ namespace Tela_de_Splash
             this.lblNameLog.AutoSize = true;
             this.lblNameLog.Font = new System.Drawing.Font("Yu Gothic", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNameLog.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNameLog.Location = new System.Drawing.Point(745, 46);
+            this.lblNameLog.Location = new System.Drawing.Point(764, 46);
             this.lblNameLog.Name = "lblNameLog";
-            this.lblNameLog.Size = new System.Drawing.Size(104, 33);
+            this.lblNameLog.Size = new System.Drawing.Size(64, 33);
             this.lblNameLog.TabIndex = 6;
-            this.lblNameLog.Text = "Ademir ";
+            this.lblNameLog.Text = "joao";
             // 
             // picUsuario
             // 
@@ -392,6 +366,7 @@ namespace Tela_de_Splash
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(903, 529);
             this.panelDesktop.TabIndex = 2;
+            this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
             // 
             // panelSombraEsquerda
             // 
@@ -424,7 +399,7 @@ namespace Tela_de_Splash
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Yu Gothic", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.lblDate.Location = new System.Drawing.Point(280, 346);
+            this.lblDate.Location = new System.Drawing.Point(266, 346);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(340, 33);
             this.lblDate.TabIndex = 3;
@@ -514,7 +489,6 @@ namespace Tela_de_Splash
         private System.Windows.Forms.Panel panelSombraEsquerda;
         private System.Windows.Forms.Panel panelSubCadastro;
         private FontAwesome.Sharp.IconButton btnProduto;
-        private FontAwesome.Sharp.IconButton btnServiços;
         private FontAwesome.Sharp.IconButton btnCliente;
         private FontAwesome.Sharp.IconButton btnPedido;
         private FontAwesome.Sharp.IconButton btnVenda;

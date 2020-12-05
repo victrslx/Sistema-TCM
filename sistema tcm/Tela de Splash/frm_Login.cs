@@ -9,15 +9,25 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Tela_de_Splash;
+using System.Data.SqlClient;
 
 namespace desing_da_tela_de_login
 {
     public partial class frm_Login : Form
     {
+        SqlConnection con = new SqlConnection(@"Data Source = DESKTOP-TFD466O\SQLEXPRESS; Initial Catalog = db_games; Integrated Security = sspi");
+
+        SqlCommand cmd = new SqlCommand();
+
         public frm_Login()
         {
             InitializeComponent();
         }
+
+        public bool logado = false;
+
+        public static string usuarioConectado;
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -83,9 +93,36 @@ namespace desing_da_tela_de_login
 
         private void btnLogar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frm_Principal login = new frm_Principal();
-            login.Show();
+            con.Open();
+            DataTable dados = new DataTable();
+            SqlDataAdapter Da = new SqlDataAdapter("Select * from tbl_funcionario where ds_login = @user and senha = @senha",con);
+            Da.SelectCommand.Parameters.AddWithValue("@user",txtUsuario.Text);
+            Da.SelectCommand.Parameters.AddWithValue("@senha", txtSenha.Text);
+            Da.Fill(dados);
+
+            if (dados.Rows.Count == 0)
+            {
+                logado = false;
+
+                MessageBox.Show("Usuario e senha invalidos");
+            }
+            else
+            {
+                usuarioConectado = txtUsuario.Text;
+                logado = true;
+
+                frm_Principal Principal = new frm_Principal();
+                Principal.Show();
+                this.Hide();
+
+                MessageBox.Show("Seja bem-vindo ao sistema");
+            }
+            con.Close();
+        }
+
+        private void frm_Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

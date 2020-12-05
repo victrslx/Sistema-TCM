@@ -178,6 +178,7 @@ namespace Tela_de_Splash
         {
             timer1.Start();
             lblDate.Text = DateTime.Now.ToString("dddd, dd MMM 'de' yyyy");
+            lblNameLog.Text = ""+frm_Login.usuarioConectado;
         }
 
 
@@ -217,14 +218,14 @@ namespace Tela_de_Splash
             btnInfoCadastro(sender, RGBColors.color1);
         }
 
-        private void btnServiços_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Clientes());
-        }
-
         private void btnProduto_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Clientes());
+            OpenChildForm(new Produtos());
+        }
+
+        private void panelDesktop_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

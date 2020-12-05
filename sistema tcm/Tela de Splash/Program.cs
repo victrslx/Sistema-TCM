@@ -16,7 +16,7 @@ namespace Tela_de_Splash
         {
            // Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_Splash());
+            Application.Run(new frm_Principal());
         }
     }
 }
