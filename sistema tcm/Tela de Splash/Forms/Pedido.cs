@@ -56,5 +56,10 @@ namespace Tela_de_Splash.Forms
         {
 
         }
+
+        private void Pedido_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

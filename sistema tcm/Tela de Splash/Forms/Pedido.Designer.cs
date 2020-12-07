@@ -32,7 +32,6 @@ namespace Tela_de_Splash.Forms
             this.lblCdPedido = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtCdPedido = new System.Windows.Forms.TextBox();
-            this.lblData = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtCompra = new System.Windows.Forms.TextBox();
             this.lblTotalCompra = new System.Windows.Forms.Label();
@@ -42,6 +41,8 @@ namespace Tela_de_Splash.Forms
             this.cmbVezes = new System.Windows.Forms.ComboBox();
             this.button_WOC3 = new ePOSOne.btnProduct.Button_WOC();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lblData = new System.Windows.Forms.Label();
+            this.mskData = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,16 +74,6 @@ namespace Tela_de_Splash.Forms
             this.txtCdPedido.Size = new System.Drawing.Size(54, 34);
             this.txtCdPedido.TabIndex = 1;
             this.txtCdPedido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblData
-            // 
-            this.lblData.AutoSize = true;
-            this.lblData.Font = new System.Drawing.Font("Verdana", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblData.Location = new System.Drawing.Point(635, 90);
-            this.lblData.Name = "lblData";
-            this.lblData.Size = new System.Drawing.Size(73, 31);
-            this.lblData.TabIndex = 18;
-            this.lblData.Text = "Data";
             // 
             // panel5
             // 
@@ -155,7 +146,13 @@ namespace Tela_de_Splash.Forms
             this.cmbVezes.Items.AddRange(new object[] {
             "1x",
             "2x",
-            "3x"});
+            "3x",
+            "5x",
+            "6x",
+            "7x",
+            "8x",
+            "9x",
+            "10x"});
             this.cmbVezes.Location = new System.Drawing.Point(308, 398);
             this.cmbVezes.Name = "cmbVezes";
             this.cmbVezes.Size = new System.Drawing.Size(121, 21);
@@ -178,7 +175,7 @@ namespace Tela_de_Splash.Forms
             this.button_WOC3.OnHoverTextColor = System.Drawing.Color.White;
             this.button_WOC3.Size = new System.Drawing.Size(114, 53);
             this.button_WOC3.TabIndex = 6;
-            this.button_WOC3.Text = "Realizar Venda";
+            this.button_WOC3.Text = "Realizar pedido";
             this.button_WOC3.TextColor = System.Drawing.Color.White;
             this.button_WOC3.UseVisualStyleBackColor = true;
             this.button_WOC3.Click += new System.EventHandler(this.button_WOC3_Click);
@@ -193,11 +190,35 @@ namespace Tela_de_Splash.Forms
             this.dataGridView1.TabIndex = 30;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // lblData
+            // 
+            this.lblData.AutoSize = true;
+            this.lblData.Font = new System.Drawing.Font("Verdana", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblData.Location = new System.Drawing.Point(479, 89);
+            this.lblData.Name = "lblData";
+            this.lblData.Size = new System.Drawing.Size(227, 31);
+            this.lblData.TabIndex = 49;
+            this.lblData.Text = "Data da compra:";
+            // 
+            // mskData
+            // 
+            this.mskData.BackColor = System.Drawing.SystemColors.Control;
+            this.mskData.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mskData.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskData.Location = new System.Drawing.Point(701, 92);
+            this.mskData.Mask = "00/00/0000";
+            this.mskData.Name = "mskData";
+            this.mskData.Size = new System.Drawing.Size(126, 28);
+            this.mskData.TabIndex = 48;
+            this.mskData.ValidatingType = typeof(System.DateTime);
+            // 
             // Pedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(887, 486);
+            this.Controls.Add(this.lblData);
+            this.Controls.Add(this.mskData);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button_WOC3);
             this.Controls.Add(this.cmbVezes);
@@ -207,13 +228,13 @@ namespace Tela_de_Splash.Forms
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.txtCompra);
             this.Controls.Add(this.lblTotalCompra);
-            this.Controls.Add(this.lblData);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtCdPedido);
             this.Controls.Add(this.lblCdPedido);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Pedido";
-            this.Text = "Delivery";
+            this.Text = "Pedido";
+            this.Load += new System.EventHandler(this.Pedido_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -225,7 +246,6 @@ namespace Tela_de_Splash.Forms
         private System.Windows.Forms.Label lblCdPedido;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtCdPedido;
-        private System.Windows.Forms.Label lblData;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox txtCompra;
         private System.Windows.Forms.Label lblTotalCompra;
@@ -235,5 +255,7 @@ namespace Tela_de_Splash.Forms
         private System.Windows.Forms.ComboBox cmbVezes;
         private ePOSOne.btnProduct.Button_WOC button_WOC3;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label lblData;
+        private System.Windows.Forms.MaskedTextBox mskData;
     }
 }

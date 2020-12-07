@@ -47,9 +47,9 @@ namespace Tela_de_Splash.Forms
             this.lblCdPedido.Font = new System.Drawing.Font("Verdana", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCdPedido.Location = new System.Drawing.Point(176, 95);
             this.lblCdPedido.Name = "lblCdPedido";
-            this.lblCdPedido.Size = new System.Drawing.Size(201, 31);
+            this.lblCdPedido.Size = new System.Drawing.Size(196, 31);
             this.lblCdPedido.TabIndex = 2;
-            this.lblCdPedido.Text = "Código Pedido:";
+            this.lblCdPedido.Text = "Código venda:";
             // 
             // lblCdProduto
             // 
@@ -71,6 +71,7 @@ namespace Tela_de_Splash.Forms
             this.txtBanco.ReadOnly = true;
             this.txtBanco.Size = new System.Drawing.Size(520, 126);
             this.txtBanco.TabIndex = 14;
+            this.txtBanco.TextChanged += new System.EventHandler(this.txtBanco_TextChanged);
             // 
             // button_WOC3
             // 
@@ -148,11 +149,12 @@ namespace Tela_de_Splash.Forms
             this.txt.BackColor = System.Drawing.SystemColors.Control;
             this.txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt.Font = new System.Drawing.Font("Yu Gothic", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt.Location = new System.Drawing.Point(382, 99);
+            this.txt.Location = new System.Drawing.Point(376, 98);
             this.txt.Name = "txt";
             this.txt.Size = new System.Drawing.Size(54, 34);
             this.txt.TabIndex = 30;
             this.txt.Text = "0";
+            this.txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel2
             // 
@@ -167,11 +169,12 @@ namespace Tela_de_Splash.Forms
             this.textBox1.BackColor = System.Drawing.SystemColors.Control;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Yu Gothic", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(437, 152);
+            this.textBox1.Location = new System.Drawing.Point(431, 151);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(54, 34);
             this.textBox1.TabIndex = 32;
             this.textBox1.Text = "0";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Consulta
             // 

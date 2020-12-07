@@ -16,5 +16,10 @@ namespace Tela_de_Splash.Forms
         {
             InitializeComponent();
         }
+
+        private void txtBanco_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

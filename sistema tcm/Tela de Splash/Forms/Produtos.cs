@@ -22,6 +22,7 @@ namespace Tela_de_Splash.Forms
         public Produtos()
         {
             InitializeComponent();
+            cmd.Connection = con;
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -57,44 +58,60 @@ namespace Tela_de_Splash.Forms
                 {
                     cat = "Jogos";
                 }
-
                 try
                 {
+                   
+                   string sql = "insert into tbl_produtos(descricao,categoria,nm_produto) values(@descri,@categoria,@nome)";
+                    SqlCommand cmd = new SqlCommand(sql,con);
+                    cmd.Parameters.Add("@descri", SqlDbType.VarChar).Value = txtDescri.Text;
+                    cmd.Parameters.Add("@categoria", SqlDbType.VarChar).Value = cat;
+                    cmd.Parameters.Add("@nome", SqlDbType.VarChar).Value = txtNome.Text;
                     con.Open();
-                    string strSQL;
-                    cmd.Connection = con;
-   
-                    dt = cmd.ExecuteReader();
-                    if (dt.HasRows)
-                    {
-                        MessageBox.Show("produto já cadastrado", "ops", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        if (!dt.IsClosed)
-                        {
-                            dt.Close();
-                        }
-
-                        strSQL = "insert into tbl_produtos(descricao,categoria,nm_produto) values(@descri,@categoria,@nome)";
-                        cmd.Parameters.Add("@descri", SqlDbType.VarChar).Value = txtDescri.Text;
-                        cmd.Parameters.Add("@categoria", SqlDbType.VarChar).Value = cat;
-                        cmd.Parameters.Add("@nome", SqlDbType.VarChar).Value = txtNome.Text;
-
-                        cmd.Connection = con;
-                        cmd.CommandText = strSQL;
-                        cmd.ExecuteNonQuery();
-
-                        MessageBox.Show("dados cadastrados com sucesso");
-                        con.Close();
-
-                    }
+                    cmd.ExecuteNonQuery();
+                    con.Close();
                 }
                 catch (Exception erro)
                 {
                     MessageBox.Show(erro.Message);
-                    con.Close();
                 }
+
+
+                /* try
+                 {
+                     con.Open();
+                     cmd.Connection = con;
+                     string strSQL = "Select * from tbl_produto where nm_produto = " + txtNome.Text;
+                     dt = cmd.ExecuteReader();
+                     if (dt.HasRows)
+                     {
+                         MessageBox.Show("produto já cadastrado", "ops", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                     }
+                     else
+                     {
+                         if (!dt.IsClosed)
+                         {
+                             dt.Close();
+                         }
+
+                         strSQL = "insert into tbl_produtos(descricao,categoria,nm_produto) values(@descri,@categoria,@nome)";
+                         cmd.Parameters.Add("@descri", SqlDbType.VarChar).Value = txtDescri.Text;
+                         cmd.Parameters.Add("@categoria", SqlDbType.VarChar).Value = cat;
+                         cmd.Parameters.Add("@nome", SqlDbType.VarChar).Value = txtNome.Text;
+
+                        //md.Connection = con;
+                        //md.CommandText = strSQL;
+                         cmd.ExecuteNonQuery();
+
+                         MessageBox.Show("dados cadastrados com sucesso");
+                         con.Close();
+
+                     }
+                 }
+                 catch (Exception erro)
+                 {
+                     MessageBox.Show(erro.Message);
+                     con.Close();
+                 }*/
             }
         }
 

@@ -36,24 +36,23 @@ namespace Tela_de_Splash
             this.lblQuantidade = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtquantidade = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button_WOC3 = new ePOSOne.btnProduct.Button_WOC();
-            this.button_WOC2 = new ePOSOne.btnProduct.Button_WOC();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtProd = new System.Windows.Forms.TextBox();
+            this.dgvvendas = new System.Windows.Forms.DataGridView();
             this.lblData = new System.Windows.Forms.Label();
             this.mskData = new System.Windows.Forms.MaskedTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.lblNomeProd = new System.Windows.Forms.Label();
+            this.lblValor1 = new System.Windows.Forms.Label();
+            this.lblTotal1 = new System.Windows.Forms.Label();
+            this.lblTotalGeral = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblCdCliente = new System.Windows.Forms.Label();
+            this.lblcodvendas = new System.Windows.Forms.Label();
+            this.btnInserir = new ePOSOne.btnProduct.Button_WOC();
+            this.button_WOC2 = new ePOSOne.btnProduct.Button_WOC();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvvendas)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCdPedido
@@ -62,10 +61,9 @@ namespace Tela_de_Splash
             this.lblCdPedido.Font = new System.Drawing.Font("Verdana", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCdPedido.Location = new System.Drawing.Point(95, 37);
             this.lblCdPedido.Name = "lblCdPedido";
-            this.lblCdPedido.Size = new System.Drawing.Size(201, 31);
+            this.lblCdPedido.Size = new System.Drawing.Size(210, 31);
             this.lblCdPedido.TabIndex = 1;
-            this.lblCdPedido.Text = "Código Pedido:";
-            this.lblCdPedido.Click += new System.EventHandler(this.label1_Click);
+            this.lblCdPedido.Text = "Código Vendas:";
             // 
             // lblCdProduto
             // 
@@ -127,26 +125,6 @@ namespace Tela_de_Splash
             this.label1.TabIndex = 22;
             this.label1.Text = "Total da compra:";
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.panel6.Location = new System.Drawing.Point(327, 455);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(60, 3);
-            this.panel6.TabIndex = 28;
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Yu Gothic", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(329, 431);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(54, 34);
-            this.textBox5.TabIndex = 27;
-            this.textBox5.Text = "0";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -155,57 +133,17 @@ namespace Tela_de_Splash
             this.panel7.Size = new System.Drawing.Size(60, 3);
             this.panel7.TabIndex = 30;
             // 
-            // textBox6
+            // txtquantidade
             // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Yu Gothic", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(414, 230);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(54, 34);
-            this.textBox6.TabIndex = 29;
-            this.textBox6.Text = "0";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.panel4.Location = new System.Drawing.Point(561, 254);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(60, 3);
-            this.panel4.TabIndex = 32;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Yu Gothic", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(563, 230);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(54, 34);
-            this.textBox3.TabIndex = 31;
-            this.textBox3.Text = "0";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.panel5.Location = new System.Drawing.Point(184, 254);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(60, 3);
-            this.panel5.TabIndex = 34;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Yu Gothic", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(186, 230);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(54, 34);
-            this.textBox4.TabIndex = 33;
-            this.textBox4.Text = "0";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtquantidade.BackColor = System.Drawing.SystemColors.Control;
+            this.txtquantidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtquantidade.Font = new System.Drawing.Font("Yu Gothic", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtquantidade.Location = new System.Drawing.Point(414, 230);
+            this.txtquantidade.Name = "txtquantidade";
+            this.txtquantidade.Size = new System.Drawing.Size(54, 34);
+            this.txtquantidade.TabIndex = 29;
+            this.txtquantidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtquantidade.TextChanged += new System.EventHandler(this.txtquantidade_TextChanged);
             // 
             // panel3
             // 
@@ -215,58 +153,135 @@ namespace Tela_de_Splash
             this.panel3.Size = new System.Drawing.Size(60, 3);
             this.panel3.TabIndex = 36;
             // 
-            // textBox2
+            // txtProd
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Yu Gothic", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(358, 97);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(54, 34);
-            this.textBox2.TabIndex = 35;
-            this.textBox2.Text = "0";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtProd.BackColor = System.Drawing.SystemColors.Control;
+            this.txtProd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtProd.Font = new System.Drawing.Font("Yu Gothic", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProd.Location = new System.Drawing.Point(358, 97);
+            this.txtProd.Name = "txtProd";
+            this.txtProd.Size = new System.Drawing.Size(54, 34);
+            this.txtProd.TabIndex = 35;
+            this.txtProd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtProd.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
             // 
-            // panel1
+            // dgvvendas
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.panel1.Location = new System.Drawing.Point(300, 64);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(60, 3);
-            this.panel1.TabIndex = 38;
+            this.dgvvendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvvendas.Location = new System.Drawing.Point(101, 270);
+            this.dgvvendas.Name = "dgvvendas";
+            this.dgvvendas.RowHeadersWidth = 45;
+            this.dgvvendas.Size = new System.Drawing.Size(520, 150);
+            this.dgvvendas.TabIndex = 39;
+            this.dgvvendas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvvendas_CellContentClick);
             // 
-            // textBox1
+            // lblData
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Yu Gothic", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(302, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(54, 34);
-            this.textBox1.TabIndex = 37;
-            this.textBox1.Text = "0";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lblData.AutoSize = true;
+            this.lblData.Font = new System.Drawing.Font("Verdana", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblData.Location = new System.Drawing.Point(503, 100);
+            this.lblData.Name = "lblData";
+            this.lblData.Size = new System.Drawing.Size(227, 31);
+            this.lblData.TabIndex = 47;
+            this.lblData.Text = "Data da compra:";
             // 
-            // button_WOC3
+            // mskData
             // 
-            this.button_WOC3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.button_WOC3.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.button_WOC3.FlatAppearance.BorderSize = 0;
-            this.button_WOC3.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
-            this.button_WOC3.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
-            this.button_WOC3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_WOC3.Font = new System.Drawing.Font("Verdana", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_WOC3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button_WOC3.Location = new System.Drawing.Point(672, 283);
-            this.button_WOC3.Name = "button_WOC3";
-            this.button_WOC3.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button_WOC3.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button_WOC3.OnHoverTextColor = System.Drawing.Color.White;
-            this.button_WOC3.Size = new System.Drawing.Size(106, 50);
-            this.button_WOC3.TabIndex = 26;
-            this.button_WOC3.Text = "Inserir";
-            this.button_WOC3.TextColor = System.Drawing.Color.White;
-            this.button_WOC3.UseVisualStyleBackColor = true;
+            this.mskData.BackColor = System.Drawing.SystemColors.Control;
+            this.mskData.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mskData.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskData.Location = new System.Drawing.Point(725, 103);
+            this.mskData.Mask = "00/00/0000";
+            this.mskData.Name = "mskData";
+            this.mskData.Size = new System.Drawing.Size(126, 28);
+            this.mskData.TabIndex = 46;
+            this.mskData.ValidatingType = typeof(System.DateTime);
+            // 
+            // lblNomeProd
+            // 
+            this.lblNomeProd.AutoSize = true;
+            this.lblNomeProd.Font = new System.Drawing.Font("Yu Gothic", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeProd.Location = new System.Drawing.Point(353, 163);
+            this.lblNomeProd.Name = "lblNomeProd";
+            this.lblNomeProd.Size = new System.Drawing.Size(0, 25);
+            this.lblNomeProd.TabIndex = 48;
+            // 
+            // lblValor1
+            // 
+            this.lblValor1.AutoSize = true;
+            this.lblValor1.Font = new System.Drawing.Font("Yu Gothic", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValor1.Location = new System.Drawing.Point(180, 233);
+            this.lblValor1.Name = "lblValor1";
+            this.lblValor1.Size = new System.Drawing.Size(0, 25);
+            this.lblValor1.TabIndex = 49;
+            // 
+            // lblTotal1
+            // 
+            this.lblTotal1.AutoSize = true;
+            this.lblTotal1.Font = new System.Drawing.Font("Yu Gothic", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal1.Location = new System.Drawing.Point(557, 234);
+            this.lblTotal1.Name = "lblTotal1";
+            this.lblTotal1.Size = new System.Drawing.Size(0, 25);
+            this.lblTotal1.TabIndex = 50;
+            // 
+            // lblTotalGeral
+            // 
+            this.lblTotalGeral.AutoSize = true;
+            this.lblTotalGeral.Font = new System.Drawing.Font("Yu Gothic", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalGeral.Location = new System.Drawing.Point(327, 434);
+            this.lblTotalGeral.Name = "lblTotalGeral";
+            this.lblTotalGeral.Size = new System.Drawing.Size(0, 25);
+            this.lblTotalGeral.TabIndex = 51;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(503, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(204, 31);
+            this.label2.TabIndex = 53;
+            this.label2.Text = "Código Cliente:";
+            // 
+            // lblCdCliente
+            // 
+            this.lblCdCliente.AutoSize = true;
+            this.lblCdCliente.Font = new System.Drawing.Font("Yu Gothic", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCdCliente.Location = new System.Drawing.Point(721, 43);
+            this.lblCdCliente.Name = "lblCdCliente";
+            this.lblCdCliente.Size = new System.Drawing.Size(0, 25);
+            this.lblCdCliente.TabIndex = 54;
+            // 
+            // lblcodvendas
+            // 
+            this.lblcodvendas.AutoSize = true;
+            this.lblcodvendas.Font = new System.Drawing.Font("Yu Gothic", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcodvendas.Location = new System.Drawing.Point(311, 43);
+            this.lblcodvendas.Name = "lblcodvendas";
+            this.lblcodvendas.Size = new System.Drawing.Size(0, 25);
+            this.lblcodvendas.TabIndex = 55;
+            // 
+            // btnInserir
+            // 
+            this.btnInserir.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnInserir.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnInserir.FlatAppearance.BorderSize = 0;
+            this.btnInserir.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.btnInserir.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
+            this.btnInserir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInserir.Font = new System.Drawing.Font("Verdana", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInserir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnInserir.Location = new System.Drawing.Point(672, 283);
+            this.btnInserir.Name = "btnInserir";
+            this.btnInserir.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnInserir.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnInserir.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnInserir.Size = new System.Drawing.Size(106, 50);
+            this.btnInserir.TabIndex = 26;
+            this.btnInserir.Text = "Inserir";
+            this.btnInserir.TextColor = System.Drawing.Color.White;
+            this.btnInserir.UseVisualStyleBackColor = true;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
             // button_WOC2
             // 
@@ -288,59 +303,28 @@ namespace Tela_de_Splash
             this.button_WOC2.Text = "Novo";
             this.button_WOC2.TextColor = System.Drawing.Color.White;
             this.button_WOC2.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(101, 270);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 45;
-            this.dataGridView1.Size = new System.Drawing.Size(520, 150);
-            this.dataGridView1.TabIndex = 39;
-            // 
-            // lblData
-            // 
-            this.lblData.AutoSize = true;
-            this.lblData.Font = new System.Drawing.Font("Verdana", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblData.Location = new System.Drawing.Point(503, 94);
-            this.lblData.Name = "lblData";
-            this.lblData.Size = new System.Drawing.Size(227, 31);
-            this.lblData.TabIndex = 47;
-            this.lblData.Text = "Data da compra:";
-            // 
-            // mskData
-            // 
-            this.mskData.BackColor = System.Drawing.SystemColors.Control;
-            this.mskData.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mskData.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskData.Location = new System.Drawing.Point(725, 97);
-            this.mskData.Mask = "00/00/0000";
-            this.mskData.Name = "mskData";
-            this.mskData.Size = new System.Drawing.Size(126, 28);
-            this.mskData.TabIndex = 46;
-            this.mskData.ValidatingType = typeof(System.DateTime);
+            this.button_WOC2.Click += new System.EventHandler(this.button_WOC2_Click);
             // 
             // Vendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(887, 486);
+            this.Controls.Add(this.lblcodvendas);
+            this.Controls.Add(this.lblCdCliente);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblTotalGeral);
+            this.Controls.Add(this.lblTotal1);
+            this.Controls.Add(this.lblValor1);
+            this.Controls.Add(this.lblNomeProd);
             this.Controls.Add(this.lblData);
             this.Controls.Add(this.mskData);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dgvvendas);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtProd);
             this.Controls.Add(this.panel7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.button_WOC3);
+            this.Controls.Add(this.txtquantidade);
+            this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.button_WOC2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTotal);
@@ -353,7 +337,7 @@ namespace Tela_de_Splash
             this.Name = "Vendas";
             this.Text = "Vendas";
             this.Load += new System.EventHandler(this.Vendas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvvendas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -368,21 +352,20 @@ namespace Tela_de_Splash
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label1;
         private ePOSOne.btnProduct.Button_WOC button_WOC2;
-        private ePOSOne.btnProduct.Button_WOC button_WOC3;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox5;
+        private ePOSOne.btnProduct.Button_WOC btnInserir;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtquantidade;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtProd;
+        private System.Windows.Forms.DataGridView dgvvendas;
         private System.Windows.Forms.Label lblData;
         private System.Windows.Forms.MaskedTextBox mskData;
+        private System.Windows.Forms.Label lblNomeProd;
+        private System.Windows.Forms.Label lblValor1;
+        private System.Windows.Forms.Label lblTotal1;
+        private System.Windows.Forms.Label lblTotalGeral;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCdCliente;
+        private System.Windows.Forms.Label lblcodvendas;
     }
 }

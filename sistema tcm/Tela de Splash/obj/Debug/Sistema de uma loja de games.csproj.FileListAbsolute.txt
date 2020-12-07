@@ -29,5 +29,4 @@ C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\Sis
 C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\Tela_de_Splash.Forms.Pedido.resources
 C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\Tela_de_Splash.Forms.Consulta.resources
 C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\Tela_de_Splash.Forms.Clientes.resources
-C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\Tela_de_Splash.Forms.Serviços.resources
 C:\Users\jvslx\Desktop\Projeto-TCM-main\sistema tcm\Tela de Splash\obj\Debug\Tela_de_Splash.Forms.Produtos.resources

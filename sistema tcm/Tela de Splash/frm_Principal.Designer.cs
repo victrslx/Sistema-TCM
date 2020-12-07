@@ -399,7 +399,7 @@ namespace Tela_de_Splash
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Yu Gothic", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.lblDate.Location = new System.Drawing.Point(266, 346);
+            this.lblDate.Location = new System.Drawing.Point(278, 343);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(340, 33);
             this.lblDate.TabIndex = 3;

@@ -61,7 +61,6 @@ namespace Tela_de_Splash.Forms
             this.mskData = new System.Windows.Forms.MaskedTextBox();
             this.btnPesquisar = new ePOSOne.btnProduct.Button_WOC();
             this.btnNovo = new ePOSOne.btnProduct.Button_WOC();
-            this.btnAlterar = new ePOSOne.btnProduct.Button_WOC();
             this.btnInserir = new ePOSOne.btnProduct.Button_WOC();
             this.SuspendLayout();
             // 
@@ -406,7 +405,7 @@ namespace Tela_de_Splash.Forms
             this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNovo.Font = new System.Drawing.Font("Verdana", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNovo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnNovo.Location = new System.Drawing.Point(453, 457);
+            this.btnNovo.Location = new System.Drawing.Point(528, 457);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnNovo.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -418,27 +417,6 @@ namespace Tela_de_Splash.Forms
             this.btnNovo.UseVisualStyleBackColor = true;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
-            // btnAlterar
-            // 
-            this.btnAlterar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnAlterar.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnAlterar.FlatAppearance.BorderSize = 0;
-            this.btnAlterar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
-            this.btnAlterar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
-            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlterar.Font = new System.Drawing.Font("Verdana", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAlterar.Location = new System.Drawing.Point(753, 457);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnAlterar.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnAlterar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnAlterar.Size = new System.Drawing.Size(106, 50);
-            this.btnAlterar.TabIndex = 14;
-            this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.TextColor = System.Drawing.Color.White;
-            this.btnAlterar.UseVisualStyleBackColor = true;
-            // 
             // btnInserir
             // 
             this.btnInserir.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -449,7 +427,7 @@ namespace Tela_de_Splash.Forms
             this.btnInserir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInserir.Font = new System.Drawing.Font("Verdana", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInserir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnInserir.Location = new System.Drawing.Point(602, 457);
+            this.btnInserir.Location = new System.Drawing.Point(727, 457);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnInserir.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -484,7 +462,6 @@ namespace Tela_de_Splash.Forms
             this.Controls.Add(this.rdbFeminino);
             this.Controls.Add(this.mskTelefone);
             this.Controls.Add(this.btnNovo);
-            this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.mskCelular);
             this.Controls.Add(this.panel3);
@@ -525,7 +502,6 @@ namespace Tela_de_Splash.Forms
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.MaskedTextBox mskCelular;
         private ePOSOne.btnProduct.Button_WOC btnInserir;
-        private ePOSOne.btnProduct.Button_WOC btnAlterar;
         private ePOSOne.btnProduct.Button_WOC btnNovo;
         private System.Windows.Forms.MaskedTextBox mskTelefone;
         private System.Windows.Forms.RadioButton rdbFeminino;
