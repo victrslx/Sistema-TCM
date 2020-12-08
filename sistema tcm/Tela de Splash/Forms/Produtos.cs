@@ -25,6 +25,40 @@ namespace Tela_de_Splash.Forms
             cmd.Connection = con;
         }
 
+        private void carregaValor()
+        {
+            try
+            {
+                con.Open(); // abrindo conexão com o banco de dados
+                cmd.CommandText = "select top 1 cd_produtos from tbl_produtos order by cd_produtos desc";
+                cmd.Connection = con; // informando a conexao
+                dt = cmd.ExecuteReader(); // executando leitura dos dados;
+
+
+                if (!dt.HasRows) // se tiver linha com cpf digitado entao...
+                {
+                    lblcodprod.Text = 1.ToString();
+                }
+                else
+                {
+                    dt.Read();
+                    string numero = dt["cd_produtos"].ToString();
+                    int contador = Convert.ToInt32(numero);
+                    contador++;
+                    lblcodprod.Text = contador.ToString();
+
+                }
+
+                if (!dt.IsClosed) { dt.Close(); } // caso leitor NÃO estiver fechado, então feche.
+                con.Close();
+            }
+
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message, "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             if (cmbCategoria.SelectedIndex == -1)
@@ -61,11 +95,12 @@ namespace Tela_de_Splash.Forms
                 try
                 {
                    
-                   string sql = "insert into tbl_produtos(descricao,categoria,nm_produto) values(@descri,@categoria,@nome)";
+                   string sql = "insert into tbl_produtos(descricao,categoria,nm_produto,valorprod) values(@descri,@categoria,@nome,@valor)";
                     SqlCommand cmd = new SqlCommand(sql,con);
                     cmd.Parameters.Add("@descri", SqlDbType.VarChar).Value = txtDescri.Text;
                     cmd.Parameters.Add("@categoria", SqlDbType.VarChar).Value = cat;
                     cmd.Parameters.Add("@nome", SqlDbType.VarChar).Value = txtNome.Text;
+                    cmd.Parameters.Add("@valor", SqlDbType.Decimal).Value = txtValor.Text;
                     con.Open();
                     cmd.ExecuteNonQuery();
                     con.Close();
@@ -117,12 +152,12 @@ namespace Tela_de_Splash.Forms
 
         private void Produtos_Load(object sender, EventArgs e)
         {
-
+            carregaValor();
         }
 
         private void cmbCategoria_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+           
         }
 
         private void btnNovo_Click(object sender, EventArgs e)
@@ -132,9 +167,8 @@ namespace Tela_de_Splash.Forms
             cmbCategoria.SelectedIndex = -1;
         }
 
-        private void btnConsultar_Click(object sender, EventArgs e)
-        {
 
-        }
+     
+        
     }
 }

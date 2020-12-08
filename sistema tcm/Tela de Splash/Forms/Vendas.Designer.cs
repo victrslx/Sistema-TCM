@@ -47,11 +47,10 @@ namespace Tela_de_Splash
             this.lblValor1 = new System.Windows.Forms.Label();
             this.lblTotal1 = new System.Windows.Forms.Label();
             this.lblTotalGeral = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.lblCdCliente = new System.Windows.Forms.Label();
             this.lblcodvendas = new System.Windows.Forms.Label();
             this.btnInserir = new ePOSOne.btnProduct.Button_WOC();
-            this.button_WOC2 = new ePOSOne.btnProduct.Button_WOC();
+            this.btnNovo = new ePOSOne.btnProduct.Button_WOC();
             ((System.ComponentModel.ISupportInitialize)(this.dgvvendas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -179,7 +178,7 @@ namespace Tela_de_Splash
             // 
             this.lblData.AutoSize = true;
             this.lblData.Font = new System.Drawing.Font("Verdana", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblData.Location = new System.Drawing.Point(503, 100);
+            this.lblData.Location = new System.Drawing.Point(514, 43);
             this.lblData.Name = "lblData";
             this.lblData.Size = new System.Drawing.Size(227, 31);
             this.lblData.TabIndex = 47;
@@ -190,7 +189,7 @@ namespace Tela_de_Splash
             this.mskData.BackColor = System.Drawing.SystemColors.Control;
             this.mskData.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mskData.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskData.Location = new System.Drawing.Point(725, 103);
+            this.mskData.Location = new System.Drawing.Point(736, 46);
             this.mskData.Mask = "00/00/0000";
             this.mskData.Name = "mskData";
             this.mskData.Size = new System.Drawing.Size(126, 28);
@@ -233,16 +232,6 @@ namespace Tela_de_Splash
             this.lblTotalGeral.Size = new System.Drawing.Size(0, 25);
             this.lblTotalGeral.TabIndex = 51;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(503, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(204, 31);
-            this.label2.TabIndex = 53;
-            this.label2.Text = "Código Cliente:";
-            // 
             // lblCdCliente
             // 
             this.lblCdCliente.AutoSize = true;
@@ -283,27 +272,27 @@ namespace Tela_de_Splash
             this.btnInserir.UseVisualStyleBackColor = true;
             this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
-            // button_WOC2
+            // btnNovo
             // 
-            this.button_WOC2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.button_WOC2.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.button_WOC2.FlatAppearance.BorderSize = 0;
-            this.button_WOC2.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
-            this.button_WOC2.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
-            this.button_WOC2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_WOC2.Font = new System.Drawing.Font("Verdana", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_WOC2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button_WOC2.Location = new System.Drawing.Point(672, 359);
-            this.button_WOC2.Name = "button_WOC2";
-            this.button_WOC2.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button_WOC2.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button_WOC2.OnHoverTextColor = System.Drawing.Color.White;
-            this.button_WOC2.Size = new System.Drawing.Size(106, 50);
-            this.button_WOC2.TabIndex = 25;
-            this.button_WOC2.Text = "Novo";
-            this.button_WOC2.TextColor = System.Drawing.Color.White;
-            this.button_WOC2.UseVisualStyleBackColor = true;
-            this.button_WOC2.Click += new System.EventHandler(this.button_WOC2_Click);
+            this.btnNovo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnNovo.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnNovo.FlatAppearance.BorderSize = 0;
+            this.btnNovo.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.btnNovo.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
+            this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNovo.Font = new System.Drawing.Font("Verdana", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnNovo.Location = new System.Drawing.Point(672, 359);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnNovo.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnNovo.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnNovo.Size = new System.Drawing.Size(106, 50);
+            this.btnNovo.TabIndex = 25;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.TextColor = System.Drawing.Color.White;
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // Vendas
             // 
@@ -312,7 +301,6 @@ namespace Tela_de_Splash
             this.ClientSize = new System.Drawing.Size(887, 486);
             this.Controls.Add(this.lblcodvendas);
             this.Controls.Add(this.lblCdCliente);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblTotalGeral);
             this.Controls.Add(this.lblTotal1);
             this.Controls.Add(this.lblValor1);
@@ -325,7 +313,7 @@ namespace Tela_de_Splash
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.txtquantidade);
             this.Controls.Add(this.btnInserir);
-            this.Controls.Add(this.button_WOC2);
+            this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.lblQuantidade);
@@ -351,7 +339,7 @@ namespace Tela_de_Splash
         private System.Windows.Forms.Label lblQuantidade;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label1;
-        private ePOSOne.btnProduct.Button_WOC button_WOC2;
+        private ePOSOne.btnProduct.Button_WOC btnNovo;
         private ePOSOne.btnProduct.Button_WOC btnInserir;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TextBox txtquantidade;
@@ -364,7 +352,6 @@ namespace Tela_de_Splash
         private System.Windows.Forms.Label lblValor1;
         private System.Windows.Forms.Label lblTotal1;
         private System.Windows.Forms.Label lblTotalGeral;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblCdCliente;
         private System.Windows.Forms.Label lblcodvendas;
     }

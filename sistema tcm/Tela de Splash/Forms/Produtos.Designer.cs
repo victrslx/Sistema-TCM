@@ -37,12 +37,13 @@ namespace Tela_de_Splash.Forms
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtDescri = new System.Windows.Forms.TextBox();
             this.lblDescri = new System.Windows.Forms.Label();
-            this.btnConsultar = new ePOSOne.btnProduct.Button_WOC();
             this.btnCadastrar = new ePOSOne.btnProduct.Button_WOC();
             this.btnNovo = new ePOSOne.btnProduct.Button_WOC();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblCodigo = new System.Windows.Forms.Label();
+            this.lblcodprod = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txtValor = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cmbCategoria
@@ -127,28 +128,6 @@ namespace Tela_de_Splash.Forms
             this.lblDescri.TabIndex = 45;
             this.lblDescri.Text = "Descrição:";
             // 
-            // btnConsultar
-            // 
-            this.btnConsultar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnConsultar.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnConsultar.FlatAppearance.BorderSize = 0;
-            this.btnConsultar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
-            this.btnConsultar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
-            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultar.Font = new System.Drawing.Font("Verdana", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnConsultar.Location = new System.Drawing.Point(337, 403);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnConsultar.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnConsultar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnConsultar.Size = new System.Drawing.Size(130, 58);
-            this.btnConsultar.TabIndex = 47;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.TextColor = System.Drawing.Color.White;
-            this.btnConsultar.UseVisualStyleBackColor = true;
-            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
-            // 
             // btnCadastrar
             // 
             this.btnCadastrar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -159,7 +138,7 @@ namespace Tela_de_Splash.Forms
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar.Font = new System.Drawing.Font("Verdana", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCadastrar.Location = new System.Drawing.Point(562, 403);
+            this.btnCadastrar.Location = new System.Drawing.Point(727, 407);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnCadastrar.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -181,7 +160,7 @@ namespace Tela_de_Splash.Forms
             this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNovo.Font = new System.Drawing.Font("Verdana", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNovo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnNovo.Location = new System.Drawing.Point(118, 403);
+            this.btnNovo.Location = new System.Drawing.Point(551, 407);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnNovo.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -193,36 +172,52 @@ namespace Tela_de_Splash.Forms
             this.btnNovo.UseVisualStyleBackColor = true;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.panel3.Location = new System.Drawing.Point(255, 49);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(60, 3);
-            this.panel3.TabIndex = 52;
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.BackColor = System.Drawing.SystemColors.Control;
-            this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCodigo.Enabled = false;
-            this.txtCodigo.Font = new System.Drawing.Font("Yu Gothic", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Location = new System.Drawing.Point(258, 24);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.ReadOnly = true;
-            this.txtCodigo.Size = new System.Drawing.Size(54, 34);
-            this.txtCodigo.TabIndex = 51;
-            this.txtCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Verdana", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.Location = new System.Drawing.Point(44, 22);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(204, 31);
+            this.lblCodigo.Size = new System.Drawing.Size(217, 31);
             this.lblCodigo.TabIndex = 50;
-            this.lblCodigo.Text = "Código Cliente:";
+            this.lblCodigo.Text = "Código Produto:";
+            // 
+            // lblcodprod
+            // 
+            this.lblcodprod.AutoSize = true;
+            this.lblcodprod.Font = new System.Drawing.Font("Verdana", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcodprod.Location = new System.Drawing.Point(267, 30);
+            this.lblcodprod.Name = "lblcodprod";
+            this.lblcodprod.Size = new System.Drawing.Size(0, 23);
+            this.lblcodprod.TabIndex = 51;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panel3.Location = new System.Drawing.Point(659, 227);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(62, 3);
+            this.panel3.TabIndex = 54;
+            // 
+            // txtValor
+            // 
+            this.txtValor.BackColor = System.Drawing.SystemColors.Control;
+            this.txtValor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtValor.Font = new System.Drawing.Font("Yu Gothic", 16.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtValor.Location = new System.Drawing.Point(665, 201);
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(47, 39);
+            this.txtValor.TabIndex = 52;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(560, 201);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 31);
+            this.label1.TabIndex = 53;
+            this.label1.Text = "Valor:";
             // 
             // Produtos
             // 
@@ -230,10 +225,11 @@ namespace Tela_de_Splash.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(887, 486);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.txtValor);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblcodprod);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.btnNovo);
-            this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtDescri);
@@ -262,11 +258,12 @@ namespace Tela_de_Splash.Forms
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtDescri;
         private System.Windows.Forms.Label lblDescri;
-        private ePOSOne.btnProduct.Button_WOC btnConsultar;
         private ePOSOne.btnProduct.Button_WOC btnCadastrar;
         private ePOSOne.btnProduct.Button_WOC btnNovo;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.Label lblcodprod;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox txtValor;
+        private System.Windows.Forms.Label label1;
     }
 }

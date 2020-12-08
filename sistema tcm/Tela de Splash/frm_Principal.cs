@@ -221,11 +221,13 @@ namespace Tela_de_Splash
         private void btnProduto_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Produtos());
+            btnInfoCadastro(sender, RGBColors.color1);
         }
 
         private void panelDesktop_Paint(object sender, PaintEventArgs e)
         {
 
         }
+
     }
 }

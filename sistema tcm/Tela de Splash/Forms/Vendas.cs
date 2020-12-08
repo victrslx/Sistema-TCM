@@ -82,13 +82,13 @@ namespace Tela_de_Splash
                     {
                         objDados.Read();
                         lblNomeProd.Text = objDados["nm_produto"].ToString();
-                        lblValor.Text = objDados["valorprod"].ToString();
+                        lblValor1.Text = objDados["valorprod"].ToString();
                         con.Close();
                     }
 
                     if (!objDados.IsClosed) { objDados.Close(); } // caso leitor NÃO estiver fechado, então feche.
                     txtquantidade.Text = "1";
-                    lblTotal.Text = lblValor.Text;
+                    lblTotal1.Text = lblValor1.Text;
                 }
                 catch (Exception erro)
                 {
@@ -98,7 +98,7 @@ namespace Tela_de_Splash
             else
             {
                 lblNomeProd.Text = "";
-                lblValor.Text = "";
+                lblValor1.Text = "";
             }
         }
 
@@ -107,7 +107,7 @@ namespace Tela_de_Splash
             if (txtquantidade.Text != "")
             {
                 int qt = Convert.ToInt16(txtquantidade.Text);
-                decimal valor = Convert.ToDecimal(lblValor.Text);
+                decimal valor = Convert.ToDecimal(lblValor1.Text);
                 decimal total = qt * valor;
                 lblTotalGeral.Text = total.ToString();
             }
@@ -123,7 +123,7 @@ namespace Tela_de_Splash
             int codProd = Convert.ToInt32(txtProd.Text);
             string data = mskData.Text;
             int qt = Convert.ToInt32(txtquantidade.Text);
-            decimal total = Convert.ToDecimal(lblTotal.Text);
+            decimal total = Convert.ToDecimal(lblTotal1.Text);
 
 
             try
@@ -187,9 +187,9 @@ namespace Tela_de_Splash
 
         }
 
-        private void button_WOC2_Click(object sender, EventArgs e)
+        private void btnNovo_Click(object sender, EventArgs e)
         {
-            carregaValor();
+            
         }
 
         private void Vendas_Load(object sender, EventArgs e)

@@ -29,7 +29,7 @@ namespace Tela_de_Splash.Forms
             mskTelefone.Enabled = false;
             mskCPF.Enabled = false;
             btnInserir.Enabled = false;
-            btnAlterar.Enabled = false;
+
             btnNovo.Enabled = true;
             mskCelular.Enabled = false;
             mskCep.Enabled = false;
@@ -49,7 +49,7 @@ namespace Tela_de_Splash.Forms
             mskTelefone.Enabled = true;
             mskCPF.Enabled = true;
             btnInserir.Enabled = true;
-            btnAlterar.Enabled = true;
+
             btnNovo.Enabled = true;
             mskCPFSearch.Enabled = true;
             mskCep.Enabled = true;
